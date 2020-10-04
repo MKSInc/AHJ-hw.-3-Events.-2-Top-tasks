@@ -31,6 +31,14 @@ module.exports = (buildMode) => ({
           MiniCssExtractPlugin.loader, 'css-loader',
         ],
       },
+      {
+        test: /\.(svg|png)$/,
+        use: [
+          {
+            loader: 'url-loader',
+          },
+        ],
+      },
     ],
   },
   plugins: [
